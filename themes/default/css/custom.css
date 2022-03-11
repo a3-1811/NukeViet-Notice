@@ -1,0 +1,69 @@
+/**
+ * NukeViet Content Management System
+ * @version 4.x
+ * @author VINADES.,JSC <contact@vinades.vn>
+ * @copyright (C) 2009-2021 VINADES.,JSC. All rights reserved
+ * @license GNU/GPL version 2 or any later version
+ * @see https://github.com/nukeviet The NukeViet CMS GitHub project
+ */
+
+/* Các tùy chỉnh CSS của giao diện nên để vào đây */
+.messages-news{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+}
+.messages{
+    padding: 1rem;
+    position: relative;
+}
+.messages .messages__button{
+    cursor: pointer;
+    position: relative;
+}
+.messages .messages__content{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    left: 0;
+    top: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: none;
+    z-index: 99999;
+    background: #fff;
+    padding: 1rem;
+    color: #000;
+    border-radius: 20px;
+    border: 2px solid #428BCA;
+}
+.messages .messages__content h3{
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+}
+.messages .messages__content p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #000;
+}
+.messages .messages__button.open ~ .messages__content{
+    display: block;
+}
+.notice_dot{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: red;
+    border-radius: 50%;
+    top: 0;
+    right:-5px ;
+    display: none;
+}
+.notice_dot.active{
+    display: block;
+}
